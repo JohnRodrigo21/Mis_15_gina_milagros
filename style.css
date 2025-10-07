@@ -1,0 +1,232 @@
+body {
+  background: linear-gradient(to bottom right, #f3e6ff, #e9d8ff);
+  color: #4a2e70;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #7a4cb3;
+}
+
+.name {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  color: #9c6ade;
+}
+.name1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 5.5rem;
+  color: #9c6ade;
+}
+
+.text-lila {
+  color: #8d58d9;
+}
+
+.btn-lila {
+  background-color: #9c6ade;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+}
+.btn-lila:hover {
+  background-color: #7b49c2;
+  transform: scale(1.05);
+}
+
+.countdown div {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 0 5px;
+  padding: 15px;
+  min-width: 70px;
+}
+.countdown span {
+  display: block;
+  font-size: 1.5rem;
+  color: #7b49c2;
+  font-weight: bold;
+}
+.countdown small {
+  font-size: 0.8rem;
+}
+
+/* Caja central */
+.content-box {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mariposas animadas */
+.butterfly-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.butterfly {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('images/mariposa.png');
+  background-size: cover;
+  opacity: 0.8;
+  animation: fly 20s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+  }
+  .countdown div {
+    padding: 10px;
+    min-width: 60px;
+  }
+}
+/* --- Fix responsive: imagen y countdown --- */
+
+/* Sobrescribe el estilo inline de la imagen y la hace proporcional */
+img[alt="Quinceañera"], .quince-img {
+  width: min(180px, 36vw) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #d8b4f8;
+  display: inline-block;
+}
+
+/* Hacer que el countdown sea flexible y no provoque overflow */
+#countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+#countdown > div {
+  flex: 0 1 64px;     /* ancho base que puede encoger */
+  min-width: 56px;    /* anchura mínima razonable */
+  padding: 8px 6px;
+  box-sizing: border-box;
+}
+
+/* Ajustes adicionales para móviles pequeños */
+@media (max-width: 420px) {
+  .name { font-size: 1.4rem; }
+  .title { font-size: 1.05rem; }
+  #countdown > div { flex: 0 1 48px; min-width: 42px; padding: 6px 4px; }
+  .btn-lila { padding: 8px 14px; font-size: 0.95rem; }
+}
+
+.memory-section h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #9c27b0;
+}
+
+.preview-photo {
+  position: relative;
+}
+
+.preview-photo .main-photo {
+  border: 4px solid #e1bbee;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.preview-photo .main-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Línea de tiempo */
+.timeline {
+  display: none;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 4px;
+  background-color: #d4a5f9;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.timeline-item img {
+  border: 3px solid #e5ccff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(156, 39, 176, 0.4);
+}
+
+.timeline-year {
+  margin-top: 8px;
+  color: #7a2b94;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-line {
+    display: none;
+  }
+  .timeline-item img {
+    width: 100px;
+    height: 100px;
+  }
+}

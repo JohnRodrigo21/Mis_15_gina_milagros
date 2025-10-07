@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Mis XV Años</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  /* Portada inicial */
+  .cover {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #f9e6ff, #e6c6fa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .cover.hidden {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+  }
+
+  .cover .emoji {
+    font-size: 9.5rem;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+
+  .cover h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #a45bd7;
+    margin-top: 15px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  /* Contenedor principal al inicio oculto */
+  .content-box {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .content-box.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+</head>
+<body>
+  <!-- Fondo de mariposas -->
+  <div class="butterfly-container"></div>
+  <div class="container text-center py-5 content-box">
+    <!-- Imagen de la quinceañera -->
+     <!-- Separador decorativo antes de sección -->
+      <div class="text-center my-4">
+        <img src="images/lilll.png" alt="Decoración floral" class="img-fluid" style="max-width: 300px;">
+      </div>
+    <div class="mb-4">
+      <img src="images/perfil (2).png" alt="Quinceañera" class="img-fluid rounded-circle shadow" style="width:180px; height:180px; object-fit:cover;">
+    </div>
+
+    <h1 class="mb-3 title"><i class="bi bi-stars"></i> Mis 15 Años <i class="bi bi-stars"></i></h1>
+    <h2 class="name1">Gina Milagros</h2>
+    <p class="quote">"Agradezco a Dios por cada bendición en mi vida, a mis padres por hacer este sueño realidad, por estar a mi lado en cada momento. A partir de hoy comienzan nuevos caminos por recorrer, nuevas etapas para mi vida, este día tan anhelado a llegado y hoy queremos compartir un día inolvidable."</p>
+
+    <div class="info mt-4">
+      <p><i class="bi bi-calendar-heart"></i> <strong> Sábado 11 de Octubre, 2025</strong></p>
+      <p><i class="bi bi-clock"></i> <strong> 7:00 PM</strong></p>
+      <p><i class="bi bi-house-door"></i> Recepción: Recreo Angamar - Av. Sesquicentenario S/N - Curibamba</p>
+      <p><i class="bi bi-arrow-right"></i> Referencia: Una cuadra antes del recreo Tullpa.</p>
+
+      <!-- Cuenta regresiva -->
+        <h4 class="mt-4 text-lila">Faltan:</h4>
+        <div id="countdown" class="d-flex justify-content-center mt-3 countdown">
+          <div><span id="days">00</span><small>Días</small></div>
+          <div><span id="hours">00</span><small>Horas</small></div>
+          <div><span id="minutes">00</span><small>Min</small></div>
+          <div><span id="seconds">00</span><small>Seg</small></div>
+        </div>
+        <div>
+          <!-- Botón ubicación -->
+            <a href="https://maps.app.goo.gl/9K2Sq33JeCcSocrf6" target="_blank" class="btn btn-lila mt-2">
+              <i class="bi bi-geo-alt"></i> Ver Ubicación
+            </a>
+        </div>
+    </div>
+
+        <!-- Botón de confirmación (ahora es un enlace al formulario de Google Forms) -->
+      <div class="mt-4">
+        <a href="https://forms.gle/fafS9oYEjyc9cTBNA" target="_blank" class="btn btn-lila">
+          <i class="bi bi-envelope-heart"></i> Confirmar Asistencia
+        </a>
+      </div>
+
+        <!-- Separador decorativo -->
+        <div class="text-center my-4">
+          <img src="images/lilll.png" alt="Decoración floral" class="img-fluid" style="max-width: 300px;">
+        </div>
+
+        <!-- Sección de Video de la Invitación -->
+        <section class="video-section mt-5 text-center">
+          <h3 class="mb-4 text-lila">
+            <i class="bi bi-play-circle-fill"></i> Video de la Invitación
+          </h3>
+
+          <div class="container d-flex flex-column align-items-center">
+            <video controls class="rounded-4 shadow" width="100%" style="max-width: 600px; border: 4px solid #e6c4f0;">
+              <source src="images/1006 (1) (1).mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p class="mt-3 text-muted fst-italic">
+              <i class="bi bi-stars"></i> Disfruta este pequeño adelanto de mi gran noche 💫
+            </p>
+          </div>
+        </section>
+
+
+    <!-- Separador decorativo antes de sección -->
+  <div class="text-center my-4">
+    <img src="images/lilll.png" alt="Decoración floral" class="img-fluid" style="max-width: 300px;">
+  </div>
+
+
+
+<!-- Sección de agradecimiento a los padrinos -->
+<section class="godparents-section mt-5 text-center">
+  <h3 class="mb-4 text-lila">
+    <i class="bi bi-stars"></i> Con cariño, agradezco a mis queridos padrinos <i class="bi bi-stars"></i>
+  </h3>
+
+  <p class="mb-5 text-muted" style="max-width: 700px; margin: 0 auto;">
+    Agradezco de todo corazón a mis padrinos por acompañarme en este día tan especial.
+    Gracias por su apoyo, por sus consejos, por ser ejemplo de amor y por estar siempre presentes 
+    en los momentos más importantes de mi vida. 
+    Su cariño y bendiciones hacen que este día sea aún más significativo.
+  </p>
+
+  <div class="row justify-content-center">
+    <!-- Padrino -->
+    <div class="col-md-4 mb-3">
+      <img src="images/padrino.png" alt="Padrino" 
+           class="img-fluid rounded-circle shadow"
+           style="width:160px; height:160px; object-fit:cover;">
+      <h5 class="name mt-3">Victor Saúl Villano Rojas </h5>
+    </div>
+
+    <!-- Madrina -->
+    <div class="col-md-4 mb-3">
+      <img src="images/madrina.jpg" alt="Madrina" 
+           class="img-fluid rounded-circle shadow"
+           style="width:160px; height:160px; object-fit:cover;">
+      <h5 class="name mt-3">Jacky Mondalgo Oscco</h5>
+    </div>
+  </div>
+</section>
+
+  <!-- Separador decorativo antes de sección -->
+  <div class="text-center my-4">
+    <img src="images/lilll.png" alt="Decoración floral" class="img-fluid" style="max-width: 300px;">
+  </div>
+        <!-- Sección de agradecimiento a los padres -->
+    <section class="parents-section mt-5 text-center">
+      <h3 class="mb-4 text-lila"><i class="bi bi-stars"></i> Con todo mi amor, agradezco a mis padres<i class="bi bi-stars"></i></h3>
+      <div class="row justify-content-center">
+        <!-- Papá -->
+        <div class="col-md-4 mb-3">
+          <img src="images/padre.png" alt="Papá" class="img-fluid rounded-circle shadow" style="width:160px; height:160px; object-fit:cover;">
+          <h5 class="name">Alcides Rodrigo Quispe</h5>
+          <p class="small text-muted">Por su ejemplo y su afecto, gracias por ser una guía constante en mi camino.</p>
+        </div>
+        <!-- Mamá -->
+        <div class="col-md-4 mb-3">
+          <img src="images/mama.jpeg" alt="Mamá" class="img-fluid rounded-circle shadow" style="width:160px; height:160px; object-fit:cover;">
+          <h5 class="name">Dora Contreras Villano</h5>
+           <p class="small text-muted">Por su ternura y sus palabras sabias, gracias por ser parte de mi historia con tanto amor.</p>
+        </div>
+      </div>
+    </section>
+  <!-- Separador decorativo antes de sección -->
+  <div class="text-center my-4">
+    <img src="images/lilll.png" alt="Decoración floral" class="img-fluid" style="max-width: 300px;">
+  </div>
+   <!-- Sección de Recuerdos - Línea de tiempo de la niñez -->
+<section class="memory-section mt-5 text-center">
+  <h3 class="mb-4 text-lila"><i class="bi bi-camera-heart"></i> Mis Recuerdos de Niñez</h3>
+
+  <!-- Previsualización inicial -->
+  <div class="preview-photo position-relative d-inline-block">
+    <img src="images/ok10.jpeg" alt="Primer recuerdo" class="img-fluid rounded shadow-sm main-photo">
+    <button id="toggleTimeline" class="btn btn-lila mt-3">
+      <i class="bi bi-images"></i> Ver más recuerdos
+    </button>
+  </div>
+
+ <!-- Línea de tiempo ordenada -->
+<div id="timeline" class="timeline mt-4">
+  <div class="timeline-line"></div>
+  <div class="row justify-content-center g-4">
+
+    <!-- 2014 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok5.jpeg" alt="Niñez 5" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2014</p>
+    </div>
+
+    <!-- 2015 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/oki1.png" alt="Niñez 8" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2015</p>
+    </div>
+
+    <!-- 2016 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok4.jpeg" alt="Niñez 4" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2016</p>
+    </div>
+
+    <!-- 2020 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok6.jpeg" alt="Niñez 6" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2020</p>
+    </div>
+
+    <!-- 2023 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok8.jpeg" alt="Niñez 8" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2023</p>
+    </div>
+
+    <!-- 2023 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/lau.jpeg" alt="Niñez 8" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2023</p>
+    </div>
+
+    <!-- 2024 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok7.jpeg" alt="Niñez 7" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2024</p>
+    </div>
+
+    <!-- 2025 -->
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok9.jpeg" alt="Niñez 2" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2025</p>
+    </div>
+    <div class="col-6 col-md-3 timeline-item">
+      <img src="images/ok10.jpeg" alt="Niñez 3" class="img-fluid rounded-circle shadow-sm">
+      <p class="timeline-year">2025</p>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Separador decorativo antes de sección -->
+  <div class="text-center my-4">
+    <img src="images/lilll.png" alt="Decoración floral" class="img-fluid" style="max-width: 300px;">
+  </div>
+
+<!-- Sección de Código de Vestimenta -->
+<section class="dresscode-section mt-5 text-center">
+  <h3 class="mb-3 text-lila">
+    <i class="bi bi-stars"></i> Código de Vestimenta <i class="bi bi-stars"></i>
+  </h3>
+
+  <!-- Imagen centrada -->
+  <div class="d-flex justify-content-center">
+    <img src="images/vestido-de-novia.png" 
+         alt="Código de Vestimenta" 
+         class="rounded shadow-sm"
+         style="width:250px; height:250px; object-fit:cover; border:3px solid #d8b6f0;">
+  </div>
+
+  <!-- Texto centrado -->
+  <p class="lead mt-4 text-muted px-3">
+    <i class="bi bi-stars"></i>
+    Te invitamos a venir con tu <strong>mejor elegancia</strong>  
+    y alegría para celebrar esta noche tan especial.  
+    <i class="bi bi-stars"></i>
+  </p>
+</section>
+
+
+  <p class="mt-4 fst-italic text-muted">
+    <i class="bi bi-stars"></i> El tono del evento es elegante y mágico. ¡Ven listo para disfrutar y brillar!
+  </p>
+
+  <p class="mb-2 text-muted">
+    Con la bendición de Dios y el amor de mis padres, te invito a celebrar conmigo este momento tan especial.
+  </p>
+
+    </section>
+
+    <footer class="mt-5 py-4 text-center" style="background-color: rgba(245, 230, 255, 0.4); border-top: 2px solid #d8b6f0;">
+  
+  <hr class="my-3" style="width: 60%; margin: auto; border-top: 1px solid #caa8e6;">
+
+  <div class="mt-3">
+    <small class="text-secondary">
+      © 2025 <strong>JR System Solutions</strong> — Todos los derechos reservados.<br>
+      <i class="bi bi-lightning-charge-fill text-lila"></i> Powered by <strong>JR System Solutions</strong>
+    </small>
+  </div>
+</footer>
+
+
+    </div>
+
+  <script src="script.js"></script>
+
+
+  <!-- Portada de carta cerrada -->
+    <div class="cover" id="cover">
+    <div class="emoji"><i class="bi bi-envelope"></i></div>
+    <h1>Toca para abrir la invitación</h1>
+    <p class="text-muted"> De <strong>Gina Milagros Rodrigo Contreras</strong></p>
+    </div>
+
+    <script>
+    // Animación de apertura de carta
+    const cover = document.getElementById('cover');
+    const content = document.querySelector('.content-box');
+
+    cover.addEventListener('click', () => {
+        cover.classList.add('hidden');
+        setTimeout(() => {
+        cover.style.display = 'none';
+        content.classList.add('visible');
+        }, 1000);
+    });
+    </script>
+
+</div> <!-- aquí termina el container principal -->
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
